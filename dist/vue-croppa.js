@@ -2,7 +2,7 @@
  * vue-croppa v1.3.8
  * https://github.com/zhanziyang/vue-croppa
  * 
- * Copyright (c) 2018 zhanziyang
+ * Copyright (c) 2022 zhanziyang
  * Released under the ISC license
  */
   
@@ -921,7 +921,6 @@ var component = { render: function render() {
         startY: 0
       };
       this.orientation = 1;
-      this.scaleRatio = null;
       this.userMetadata = null;
       this.imageSet = false;
       this.chosenFile = null;
@@ -946,6 +945,9 @@ var component = { render: function render() {
     },
     emitNativeEvent: function emitNativeEvent(evt) {
       this.emitEvent(evt.type, evt);
+    },
+    setFile: function setFile(file) {
+      this._onNewFileIn(file);
     },
     _setContainerSize: function _setContainerSize() {
       if (this.useAutoSizing) {

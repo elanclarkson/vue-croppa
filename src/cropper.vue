@@ -492,7 +492,6 @@ export default {
         startY: 0
       }
       this.orientation = 1
-      this.scaleRatio = null
       this.userMetadata = null
       this.imageSet = false
       this.chosenFile = null
